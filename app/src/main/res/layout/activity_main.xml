@@ -15,6 +15,7 @@
         android:layout_marginEnd="79dp"
         android:fontFamily="sans-serif-medium"
         android:text="@string/quiz_app_title"
+        android:textColor="@color/Black"
         android:textSize="34sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -44,9 +45,11 @@
         android:layout_marginStart="151dp"
         android:layout_marginTop="35dp"
         android:layout_marginEnd="166dp"
+        android:backgroundTint="@color/Teal"
+        android:onClick="onStartButtonPressed"
         android:text="@string/start_button_title"
+        android:textColor="@color/White"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nameInputLayout"
-        android:onClick="onStartButtonPressed"/>
+        app:layout_constraintTop_toBottomOf="@+id/nameInputLayout" />
 </androidx.constraintlayout.widget.ConstraintLayout>

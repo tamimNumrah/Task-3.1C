@@ -31,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
             return;
         }
         Intent quizIntent = new Intent(MainActivity.this, QuizActivity.class);
+        quizIntent.putExtra("username", name);
         MainActivity.this.startActivity(quizIntent);
     }
     private void showToast(String message) {
