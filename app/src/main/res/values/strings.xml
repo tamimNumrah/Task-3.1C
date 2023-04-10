@@ -9,5 +9,9 @@
     <string name="your_score">Your score:</string>
     <string name="take_new_quiz">Take New Quiz</string>
     <string name="finish">Finish</string>
+    <string name="calculator">Calculator</string>
+    <string name="subtract">Subtract</string>
+    <string name="addition">Add</string>
+    <string name="result">Result</string>
 
 </resources>

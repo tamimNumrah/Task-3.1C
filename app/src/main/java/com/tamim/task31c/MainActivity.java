@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity {
     Button startButton;
     TextInputLayout nameTextInput;
     String username;
+    Button calculatorButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = getIntent();
         username = intent.getStringExtra("username");
         startButton = findViewById(R.id.startButton);
+        calculatorButton = findViewById(R.id.calculatorButton);
         nameTextInput = findViewById(R.id.nameInputLayout);
         nameTextInput.getEditText().setText(username);
     }
@@ -37,6 +39,11 @@ public class MainActivity extends AppCompatActivity {
         Intent quizIntent = new Intent(MainActivity.this, QuizActivity.class);
         quizIntent.putExtra("username", name);
         MainActivity.this.startActivity(quizIntent);
+    }
+    public void onCalculatorButtonPressed(View view) {
+        System.out.println("Calculator Button Pressed!");
+        Intent calculatorIntent = new Intent(MainActivity.this, Calculator.class);
+        MainActivity.this.startActivity(calculatorIntent);
     }
     private void showToast(String message) {
         Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
