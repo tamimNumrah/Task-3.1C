@@ -6,4 +6,8 @@
     <string name="name_empty_error">You did not enter a name</string>
     <string name="quiz_submit_button">Submit</string>
     <string name="quiz_next_button">Next</string>
+    <string name="your_score">Your score:</string>
+    <string name="take_new_quiz">Take New Quiz</string>
+    <string name="finish">Finish</string>
+
 </resources>
