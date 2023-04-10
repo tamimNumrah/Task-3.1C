@@ -44,6 +44,7 @@ public class QuizResultActivity extends AppCompatActivity {
         System.out.println("onFinishButtonPressed!");
         Intent intent = new Intent(this,MainActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        intent.putExtra("username", username);
         startActivity(intent);
     }
     public void onTakeNewQuizButtonPressed(View view) {

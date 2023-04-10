@@ -14,13 +14,16 @@ public class MainActivity extends AppCompatActivity {
 
     Button startButton;
     TextInputLayout nameTextInput;
+    String username;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
+        Intent intent = getIntent();
+        username = intent.getStringExtra("username");
         startButton = findViewById(R.id.startButton);
         nameTextInput = findViewById(R.id.nameInputLayout);
+        nameTextInput.getEditText().setText(username);
     }
 
     public void onStartButtonPressed(View view) {
@@ -30,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
             showToast(getString(R.string.name_empty_error));
             return;
         }
+        username = name;
         Intent quizIntent = new Intent(MainActivity.this, QuizActivity.class);
         quizIntent.putExtra("username", name);
         MainActivity.this.startActivity(quizIntent);
